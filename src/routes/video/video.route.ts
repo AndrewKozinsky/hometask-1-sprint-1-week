@@ -119,8 +119,8 @@ videoRouter.put(
 
 		videos[videoIdx] = Object.assign(videos[videoIdx], { ...req.body })
 
-		res.status(200)
-		res.send(videos[videoIdx])
+		res.status(204)
+		res.end()
 	},
 )
 
