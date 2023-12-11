@@ -6,7 +6,7 @@ import VideoTypes from './video.type'
 
 const videos: VideoTypes.Video[] = [
 	{
-		id: 0,
+		id: 1,
 		title: 'string',
 		author: 'string',
 		canBeDownloaded: true,
@@ -139,6 +139,7 @@ videoRouter.delete(
 
 		videos.splice(videoIdx, 1)
 
-		res.end(204)
+		res.status(204)
+		res.end()
 	},
 )

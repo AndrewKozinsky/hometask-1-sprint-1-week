@@ -110,10 +110,7 @@ export function checkUpdateVideoBody(reqBody: unknown) {
 		})
 	}
 
-	if (
-		publicationDate !== undefined &&
-		{}.toString.call(minAgeRestriction) !== '[object String]'
-	) {
+	if (publicationDate !== undefined && {}.toString.call(publicationDate) !== '[object String]') {
 		errorResponse.errorsMessages.push({
 			message: 'Must be a date',
 			field: 'publicationDate',

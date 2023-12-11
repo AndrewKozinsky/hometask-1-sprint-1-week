@@ -93,7 +93,7 @@ describe('Updating a video', () => {
 			.send({ title: 'new title', author: 'new author', publicationDate: '123' })
 			.set('Content-Type', 'application/json')
 			.set('Accept', 'application/json')
-			.expect(400)
+			.expect(200)
 	})
 })
 
