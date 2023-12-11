@@ -1,0 +1,10 @@
+{
+	"version": 2,
+	"name": "hometask-1-sprint-1-week",
+	"builds": [
+		{ "src": "src/index.ts", "use": "@vercel/node" }
+	],
+	"routes": [
+		{ "src": "/(.*)", "dest": "src/index.ts" }
+	]
+}
