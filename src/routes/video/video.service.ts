@@ -101,8 +101,8 @@ export function checkUpdateVideoBody(reqBody: unknown) {
 
 	if (
 		minAgeRestriction !== undefined &&
-		({}.toString.call(minAgeRestriction) !== '[object Null]' ||
-			{}.toString.call(minAgeRestriction) !== '[object Number]')
+		{}.toString.call(minAgeRestriction) !== '[object Null]' &&
+		{}.toString.call(minAgeRestriction) !== '[object Number]'
 	) {
 		errorResponse.errorsMessages.push({
 			message: 'Must be a null or number',
