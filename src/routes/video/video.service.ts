@@ -110,6 +110,13 @@ export function checkUpdateVideoBody(reqBody: unknown) {
 		})
 	}
 
+	if (typeof minAgeRestriction === 'number' && minAgeRestriction < 1 && minAgeRestriction > 18) {
+		errorResponse.errorsMessages.push({
+			message: 'Must be number from 1 till 18',
+			field: 'minAgeRestriction',
+		})
+	}
+
 	if (publicationDate !== undefined && {}.toString.call(publicationDate) !== '[object String]') {
 		errorResponse.errorsMessages.push({
 			message: 'Must be a date',
